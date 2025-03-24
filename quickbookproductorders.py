@@ -4,6 +4,7 @@ import os
 import numpy as np
 from datetime import datetime
 import io
+import openpyxl
 
 
 st.title('MIB Product List Excel')
@@ -112,10 +113,10 @@ if uploaded_file:
     colornamelist = []
 
     for color in [i.split('-')[2] for i in itemsku]:
-        if colordf[['seasons color','Unnamed: 39']][colordf['seasons color'].str.lower() == color.lower()]['Unnamed: 39'].empty:
+        if colordf[['seasons color','Unnamed: 2']][colordf['seasons color'].str.lower() == color.lower()]['Unnamed: 2'].empty:
             colorname = 'missing'
         else:
-            temp = colordf[['seasons color','Unnamed: 39']][colordf['seasons color'].str.lower() == color.lower()]['Unnamed: 39']
+            temp = colordf[['seasons color','Unnamed: 2']][colordf['seasons color'].str.lower() == color.lower()]['Unnamed: 2']
             
             colorname = temp.iloc[0]
 
