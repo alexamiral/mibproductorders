@@ -4,7 +4,11 @@ import os
 import numpy as np
 from datetime import datetime
 import io
+<<<<<<< HEAD
 import openpyxl
+=======
+import numpy as np
+>>>>>>> 2782234344991d1d5632b34e91c735692fca2c1d
 
 
 st.title('MIB Product List Excel')
@@ -12,7 +16,7 @@ uploaded_file = st.file_uploader('Upload XLSX here:', type = ['xlsx'])
 
 
 if uploaded_file:
-    productlist_df_dict = pd.read_excel(uploaded_file, engine = 'openpyxl', sheet_name = None)
+    productlist_df_dict = pd.read_excel(uploaded_file, sheet_name = None)
 
     colordf = productlist_df_dict['colors']
     productlist_df = productlist_df_dict['Current'].iloc[3:, :]

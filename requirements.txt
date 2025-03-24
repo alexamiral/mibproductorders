@@ -1,3 +1,10 @@
+<<<<<<< HEAD
 numpy==1.24.4
 pandas==2.0.3
 streamlit==1.40.1
+=======
+pandas
+streamlit
+numpy
+openpyxl
+>>>>>>> 2782234344991d1d5632b34e91c735692fca2c1d
