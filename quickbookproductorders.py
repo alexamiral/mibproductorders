@@ -4,11 +4,9 @@ import os
 import numpy as np
 from datetime import datetime
 import io
-<<<<<<< HEAD
 import openpyxl
-=======
 import numpy as np
->>>>>>> 2782234344991d1d5632b34e91c735692fca2c1d
+
 
 
 st.title('MIB Product List Excel')
@@ -128,7 +126,7 @@ if uploaded_file:
 
 
     
-    SKU_Upload_seconddoc['style']= [i.split('-')[0] for i in itemsku]
+    SKU_Upload_seconddoc['style']= itemsku
     SKU_Upload_seconddoc['desc'] = totalnamelist
     SKU_Upload_seconddoc['color'] = [i.split('-')[2] for i in itemsku]
     SKU_Upload_seconddoc['color_desc'] =  colornamelist
