@@ -291,7 +291,7 @@ if selected == 'PO Creater':
             prodlistskuinf = prodlistdf[prodlistdf['SKU']==i]
             
             sizecostlist =[]
-            [sizecostlist.append(x) for x in list(prodlistskuinf[globals()[f'sizelist_{i}']].reset_index(drop = True).iloc[0]) if str(x) != 'nan' else None]
+            [sizecostlist.append(x) for x in list(prodlistskuinf[globals()[f'sizelist_{i}']].reset_index(drop = True).iloc[0]) if str(x) != 'nan']
             
             st.write("Checkpoint X")
             prodlistsizecost =  pd.DataFrame(prodlistskuinf[globals()[f'sizelist_{i}']].reset_index(
