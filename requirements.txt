@@ -3,3 +3,5 @@ streamlit
 numpy
 openpyxl
 streamlit_option_menu
+math
+xlsxwriter
