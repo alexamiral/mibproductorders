@@ -283,7 +283,7 @@ if selected == 'PO Creater':
 
 
 
-        st.write("Checkpoint X")
+        
         po_dict = {}
         for i in ogtables:
             
@@ -293,7 +293,7 @@ if selected == 'PO Creater':
             sizecostlist =[]
             [sizecostlist.append(x) for x in list(prodlistskuinf[globals()[f'sizelist_{i}']].reset_index(drop = True).iloc[0]) if str(x) != 'nan']
             
-            
+            st.write("Checkpoint X")
             prodlistsizecost =  pd.DataFrame(prodlistskuinf[globals()[f'sizelist_{i}']].reset_index(
                 drop = True).iloc[0])
             prodlistsizecost = prodlistsizecost[prodlistsizecost[0].notnull()]
