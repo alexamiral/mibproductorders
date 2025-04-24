@@ -186,13 +186,13 @@ if selected = 'MIB Product List':
         ])
 
 
-        shopify['Title'] = totalnamelist
-        shopify['Option1 Value'] = [i.split('-')[1] for i in itemsku]
-        shopify['Option2 Value'] = colornamelist
-        shopify['Variant Price'] = sales
-        shopify['Variant SKU'] = itemsku
-        shopify['Variant Barcode'] = itemsku
-        shopify['Cost per item'] = purchasecosts
+    shopify['Title'] = totalnamelist
+    shopify['Option1 Value'] = [i.split('-')[1] for i in itemsku]
+    shopify['Option2 Value'] = colornamelist
+    shopify['Variant Price'] = sales
+    shopify['Variant SKU'] = itemsku
+    shopify['Variant Barcode'] = itemsku
+    shopify['Cost per item'] = purchasecosts
 
 
         shopify['Variant Grams'] = 0.181436948
