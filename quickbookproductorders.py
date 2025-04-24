@@ -240,8 +240,7 @@ if selected == 'PO Creater':
 
         prodlistdf = pd.read_excel(uploaded_file_prodlist, sheet_name = 'Current')
         prodlist_colors = pd.read_excel(uploaded_file_prodlist,  sheet_name = 'colors', header= None)
-        ogdf = pd.read_excel(uploaded_file_OG, sheet_name = None)
-
+        ogdf = pd.read_excel(uploaded_file_OG, engine = 'openpyxl', sheet_name = 'thisone', header = None)
         newheaders= prodlistdf.iloc[3]
         prodlistdf = prodlistdf[4:]
         prodlistdf.columns = list(newheaders)
