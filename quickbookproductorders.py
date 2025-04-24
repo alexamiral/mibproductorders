@@ -461,6 +461,12 @@ if selected == 'PO Creater':
 
 
 
+        def convert_df_to_csv(df):
+        # Use StringIO to write to a string buffer (instead of a file)
+            csv_buffer = io.StringIO()
+            df.to_csv(csv_buffer, index=False)
+            return csv_buffer.getvalue()
+
         for i in PO_dataframes_names:
 
             csv_data_po = convert_df_to_csv(globals()[f'po_output_{i}'])
