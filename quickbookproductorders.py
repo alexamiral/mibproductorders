@@ -19,7 +19,7 @@ with st.sidebar:
 
     )
 
-if selected = 'MIB Product List':
+if selected == 'MIB Product List':
 
 
     st.title('MIB Product List Excel')
@@ -229,7 +229,7 @@ if selected = 'MIB Product List':
         st.download_button(label ='Download Shopify CSV', data = csv_data_shopify, file_name = 'ShopifyImports.csv', mime ='text/csv' )
 
             
-if selected = 'PO Creater':
+if selected == 'PO Creater':
 
 
     st.title('PO Creater')
