@@ -469,7 +469,7 @@ if selected == 'PO Creater':
 
         for i in PO_dataframes_names:
 
-            csv_data_po = convert_df_to_csv(globals()[f'{i}'])
+            csv_data_po = convert_df_to_csv(globals()[f'{i}'][1:])
         
             st.download_button(label =f'Download {i} CSV', data = csv_data_po, file_name = f'{i}.csv', mime ='text/csv' )
 
