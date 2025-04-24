@@ -318,7 +318,7 @@ if selected == 'PO Creater':
                 del globals()[f"po_subtable_{i.split('_')[1]}"]
 
 
-        
+        st.write("Checkpoint X")
         costlistforpo = []
         for i in list(po_dict.keys()):   
             if str(f"po_subtable_{i.split('_')[1]}") in globals():
@@ -334,7 +334,7 @@ if selected == 'PO Creater':
 
 
 
-        st.write("Checkpoint X")  
+          
         PO_dataframes = []
         PO_dataframes_names = []
         for i in ogtables:
