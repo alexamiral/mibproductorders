@@ -186,13 +186,13 @@ if selected == 'MIB Product List':
         ])
 
 
-    shopify['Title'] = totalnamelist
-    shopify['Option1 Value'] = [i.split('-')[1] for i in itemsku]
-    shopify['Option2 Value'] = colornamelist
-    shopify['Variant Price'] = sales
-    shopify['Variant SKU'] = itemsku
-    shopify['Variant Barcode'] = itemsku
-    shopify['Cost per item'] = purchasecosts
+        shopify['Title'] = totalnamelist
+        shopify['Option1 Value'] = [i.split('-')[1] for i in itemsku]
+        shopify['Option2 Value'] = colornamelist
+        shopify['Variant Price'] = sales
+        shopify['Variant SKU'] = itemsku
+        shopify['Variant Barcode'] = itemsku
+        shopify['Cost per item'] = purchasecosts
 
 
         shopify['Variant Grams'] = 0.181436948
@@ -228,7 +228,7 @@ if selected == 'MIB Product List':
         st.download_button(label ='Download NBD CSV', data = csv_data_seconddoc, file_name = 'NBDImport.csv', mime ='text/csv' )
         st.download_button(label ='Download Shopify CSV', data = csv_data_shopify, file_name = 'ShopifyImports.csv', mime ='text/csv' )
 
-            
+                
 if selected == 'PO Creater':
 
 
