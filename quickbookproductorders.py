@@ -238,7 +238,7 @@ if selected == 'PO Creater':
 
     if uploaded_file_prodlist and uploaded_file_OG:
 
-        productlist_df_dict = pd.read_excel(uploaded_file_prodlist, sheet_name = 'Current')
+        prodlistdf = pd.read_excel(uploaded_file_prodlist, sheet_name = 'Current')
         prodlist_colors = pd.read_excel(uploaded_file_prodlist,  sheet_name = 'colors', header= None)
         ogdf = pd.read_excel(uploaded_file_OG, sheet_name = None)
 
