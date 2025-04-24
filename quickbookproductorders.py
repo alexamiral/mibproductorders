@@ -283,7 +283,7 @@ if selected == 'PO Creater':
 
 
 
-         
+        st.write("Checkpoint X")
         po_dict = {}
         for i in ogtables:
             
@@ -312,7 +312,7 @@ if selected == 'PO Creater':
 
                 po_dict[f'potable_{i}_{j}'] = globals()[f'potable_{i}_{j}']
 
-        st.write("Checkpoint X")
+        
         for i in list(po_dict.keys()):   
             if str(f"po_subtable_{i.split('_')[1]}") in globals():
                 del globals()[f"po_subtable_{i.split('_')[1]}"]
