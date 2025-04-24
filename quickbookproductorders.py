@@ -461,34 +461,11 @@ if selected == 'PO Creater':
 
 
 
-        
-        def convert_dfs_to_xlsx(dfs_dict):
-            """
-            Takes a dictionary of DataFrames and returns an in-memory Excel file (as bytes).
-            Each key becomes a sheet name.
-            
-            Args:
-                dfs_dict (dict): { "SheetName1": df1, "SheetName2": df2, ... }
-            
-            Returns:
-                bytes: Excel file as byte stream.
-            """
-            output = io.BytesIO()
-            with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
-                for sheet_name, df in dfs_dict.items():
-                    df.to_excel(writer, sheet_name=sheet_name, index=False, header=False)
-            output.seek(0)
-            return output.getvalue()
-        
-        po_output_dict = {}
+        for i in PO_dataframes_names:
 
-        for i in ogtables:
-            po_output_dict[i] = globals()[f'ogtable_{i}']
-
-
-        po_output = convert_dfs_to_xlsx(po_output_dict)
-        st.download_button(label ='Download PO Output XLSX', data = po_output, file_name = 'PO_Output.xlsx')
+            csv_data_po = convert_df_to_csv(globals()[f'po_output_{i}'])
         
+            st.download_button(label =f'Download PO {i} CSV', data = csv_data_po, file_name = f'PO_{f}.csv', mime ='text/csv' )
 
 
 
