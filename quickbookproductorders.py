@@ -14,7 +14,7 @@ from streamlit_option_menu import option_menu
 with st.sidebar:
     selected = option_menu(
         menu_title = None,
-        options = ['MIB Product List', 'PO Creater']
+        options = ['MIB Product List', 'PO Creater'],
 
 
     )
