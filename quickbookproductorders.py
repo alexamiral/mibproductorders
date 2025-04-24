@@ -411,9 +411,9 @@ if selected == 'PO Creater':
                 df1.iloc[10,2] = date.today().strftime("%m/%d/%Y")
                 df1.iloc[10,4] = (date.today()+timedelta(days=60)).strftime("%m/%d/%Y")
                 df1.iloc[10,14] = (date.today()+timedelta(days=60)).strftime("%m/%d/%Y")
-                
+                df1.iloc[0,14] = i
                 df1.iloc[13,3] = i
-                df1.iloc[14,3] = prodlistdf[prodlistdf['SKU']==i]['Description']
+                df1.iloc[14,3] = prodlistdf[prodlistdf['SKU']==i]['Description'].reset_index()['Description'][0]
 
                 df2 = globals()[f'po_subtable_{i}_long'][[
                         'Unnamed: 0',
